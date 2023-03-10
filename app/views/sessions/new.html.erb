@@ -1,0 +1,25 @@
+
+  <div class="card text-center">
+  <%=render 'welcome/nav' %>
+  <div class="card-body">
+       
+   <h1>Sign In</h1>
+  <%= form_with url: sign_in_path do |f| %>
+    <p>
+    <%= f.label 'email:'%><br>
+    <%= f.text_field :email, id: 'email' %>
+    </p>
+    <p>
+    <%= f.label 'password:'%><br>
+    <%= f.password_field :password, id: 'password' %>
+    </p>
+    <p>
+    <%= f.submit 'Sign In', :class=>"btn btn-primary" %>
+    <%= link_to 'Forgot your password?', password_reset_path %>
+    </p>
+  <% end %>
+
+  
+  </div>
+ 
+</div>
